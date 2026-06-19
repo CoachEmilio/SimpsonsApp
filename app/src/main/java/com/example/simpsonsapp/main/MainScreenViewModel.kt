@@ -9,6 +9,9 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
+
+//3 archivos con la misma responsabilidad? confunde, deberia ser una cabeza una oveja como decia ravinovich
+// osea una vista un view model
 class MainScreenViewModel(dataRepository: DataRepository) : ViewModel() {
   val aux: StateFlow<MainScreenUiState> =
     dataRepository.data

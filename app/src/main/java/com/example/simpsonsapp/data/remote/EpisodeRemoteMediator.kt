@@ -103,6 +103,8 @@ class EpisodeRemoteMediator(
 }
 
 interface SimpsonsApi {
+    //URL absoluta hardcodeada en @GET y SimpsonsApi mal ubicada
+    //podroa ser encapsulado esto en otro lugar, esto aca como que rompe un poco con el patron SOLID
     @GET("https://thesimpsonsapi.com/api/episodes")
     suspend fun getEpisodes(
         @Query("page") page: Int

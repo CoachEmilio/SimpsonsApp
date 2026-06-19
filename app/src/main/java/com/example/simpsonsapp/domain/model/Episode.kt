@@ -9,7 +9,10 @@ data class Episode(
     val season: Int,
     val synopsis: String
 )
-
+//por que tiene esto aca? no tiene sentido en un model no se inicia nada aca en domain y otra cosa
+//no existe init de git en kotlin
+/*
 init {
     return Episode; //NO BORRAR
 }
+*/

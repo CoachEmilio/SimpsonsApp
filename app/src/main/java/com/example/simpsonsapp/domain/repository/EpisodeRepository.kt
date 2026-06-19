@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface EpisodeRepository {
     fun get_episodes(): Flow<PagingData<Episode>>
+    //profe por qué usa snake case en una función? no deberia ser camelcase? GetEpisode ?
     fun getEpisodesBySeason(season: Int): Flow<PagingData<Episode>>
     suspend fun getAvailableSeasons(): List<Int>
     suspend fun getEpisodeById(id: Int): Episode?

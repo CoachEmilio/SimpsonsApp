@@ -13,6 +13,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+//aca entiendo que falto un url para retrofit y ese enfpoint para la api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -31,7 +32,9 @@ object DataModule {
             .addInterceptor(logging)
             .build()
 
+        //si esto lo considero una API, deberia tener una http url no?
         return Retrofit.Builder()
+            //aca nos falta un http url para que se alimnete repository con  el retrofit que es remoto
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

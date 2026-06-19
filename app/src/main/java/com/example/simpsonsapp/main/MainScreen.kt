@@ -35,6 +35,10 @@ import com.example.simpsonsapp.components.EpisodeCard
 import com.example.simpsonsapp.components.SeasonSelector
 import kotlinx.coroutines.launch
 
+
+//por que hay antipatron aca en compose
+// no deberia tener logica de negocio aqui
+// aca solo dberia tener screen, la logica deberia ser refactorizado en viewmodel.
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen(
